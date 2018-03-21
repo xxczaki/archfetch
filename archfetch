@@ -39,7 +39,7 @@ rc="$(tput sgr0)"       # reset
 ## Color Configuration
 
 lc="${rc}${bc}${c6}"	# Labels
-nc="${rc}${bc}${c6}"	# User and hostname
+nc="${rc}${bc}${c3}"	# User and hostname
 ic="${rc}${bc}${c7}"	# Info
 fc="${rc}${bc}${c6}"	# First color
 sc="${rc}${c6}"	        # Second color
