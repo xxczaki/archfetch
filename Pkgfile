@@ -1,0 +1,23 @@
+# Description: Neofetch, but simplified. For Arch Linux.
+# URL:         https://github.com/xxczaki/archfetch
+# Maintainer:  Antoni Kepinski
+# Depends on:
+
+name=archfetch
+version=git
+release=1
+source=()
+
+build() {
+	cd "${PKGMK_SOURCE_DIR}"
+
+	if cd "${name}"; then
+		git fetch -q
+		git reset --hard origin/master
+	else
+		git clone https://github.com/xxczaki/archfetch "${name}"
+		cd "${name}"
+	fi
+
+	install -Dm755 archfetch-crux "${PKG}/usr/bin/archfetch"
+}
