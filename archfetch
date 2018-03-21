@@ -55,7 +55,7 @@ ${pc}    /${rc} ${c7}__${rc}  ${pc}\\${rc}  ${lc}UPTIME:    ${ic}${uptime}${rc}
 ${pc}   (${rc} ${c7}/  \\${rc} ${pc}/|${rc} ${lc}PACKAGES:  ${ic}${packages}${rc}
 ${c3}  _${pc}/\\${rc} ${c7}__)${rc}${pc}/${rc}${c3}_${rc}${pc})${rc} ${lc}SHELL:     ${ic}${shell}${rc}
 ${c3}  \/${pc}-____${rc}${c3}\/${rc}  ${lc}WM:        ${ic}${WM}${rc}
-${c3}             ${lc}CPU CORES:  ${ic}${cpucrs}${rc}
+${c3}             ${lc}CPU CORES: ${ic}${cpucrs}${rc}
 
 EOF
  
