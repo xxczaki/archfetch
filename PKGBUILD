@@ -1,6 +1,6 @@
 # Maintainer: Antoni Kepinski <hello[at]akepinski[dot]me>
 pkgname=archfetch
-pkgver=1.0.0
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="Neofetch, but simplified. For Arch Linux."
 url="https://github.com/xxczaki/archfetch/"
@@ -21,5 +21,5 @@ package() {
 		cd "${pkgname}"
 	fi
 
-	install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
+	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
 }
