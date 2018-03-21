@@ -21,5 +21,5 @@ package() {
 		cd "${pkgname}"
 	fi
 
-	install -Dm755 archfetch-crux "${PKG}/usr/bin/archfetch"
+	install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
 }
