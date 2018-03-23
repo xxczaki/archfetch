@@ -5,3 +5,7 @@
 # Install
 
 `yaourt archfetch`
+
+# Note
+
+Hugely inspired by [Neofetch](https://github.com/dylanaraps/neofetch) & [Screenfetch](https://github.com/KittyKatt/screenFetch)!
