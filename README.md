@@ -6,6 +6,12 @@
 
 `yaourt archfetch`
 
+# Features
+
+- Lightweight (only 1 file!)
+- Blazing fast
+- Easy installation
+
 # Note
 
 Hugely inspired by [Neofetch](https://github.com/dylanaraps/neofetch) & [Screenfetch](https://github.com/KittyKatt/screenFetch)!
