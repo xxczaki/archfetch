@@ -1,5 +1,5 @@
 #!/bin/sh
-#                                                                                           
+                                                                                     
 #                                   88            ad88                             88         
 #                                   88           d8"               ,d              88         
 #                                   88           88                88              88         
@@ -61,4 +61,3 @@ ${c3}              ${lc}CPU CORES:  ${ic}${cpucrs}${rc}
 
 
 EOF
- 
