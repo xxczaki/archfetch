@@ -1,2 +1,10 @@
 language: bash
 sudo: required
+
+arch:
+  packages:
+  # aur packages
+  - archfetch
+
+script:
+- "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
