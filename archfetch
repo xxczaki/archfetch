@@ -16,8 +16,10 @@
 hostname="$(hostname)"
 os='Arch Linux'
 kernel="$(uname -sr)"
-cpucrs="$(grep -c "^processor" /proc/cpuinfo)"
-resol="$(xdpyinfo | awk '/dimensions:/ {printf $2}')"
+gpu="$(lspci -mm | awk -F '\\"|\\" \\"|\\(' \ '/"Display|"3D|"VGA/ {a[$0] = $3 " " $4} END{for(i in a){if(!seen[a[i]]++) print a[i]}}' | cut -d "[" -f2 | cut -d "]" -f1)"
+cpu="$(awk -F ':' '/model name/\
+ {printf $2; exit}' "/proc/cpuinfo"
+)"
 uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename ${SHELL})"
@@ -56,8 +58,8 @@ ${pc}    /${rc} ${c7}__${rc}  ${pc}\\${rc}   ${lc}UPTIME:     ${ic}${uptime}${rc
 ${pc}   (${rc} ${c7}/  \\${rc} ${pc}/|${rc}  ${lc}PACKAGES:   ${ic}${packages}${rc}
 ${c3}  _${pc}/\\${rc} ${c7}__)${rc}${pc}/${rc}${c3}_${rc}${pc})${rc}  ${lc}SHELL:      ${ic}${shell}${rc}
 ${c3}  \/${pc}-____${rc}${c3}\/${rc}   ${lc}WM:         ${ic}${WM}${rc}
-${c3}              ${lc}RESOLUTION: ${ic}${resol}${rc}
-${c3}              ${lc}CPU CORES:  ${ic}${cpucrs}${rc}
+${c3}              ${lc}CPU: ${ic}${cpu}${rc}
+${c3}              ${lc}GPU:  ${ic}${gpu}${rc}
 
 
 EOF
