@@ -13,6 +13,7 @@
 
 ## Basic Configuration
 
+user="$(whoami || printf "%s" "${HOME/*\/}")"
 hostname="$(hostname)"
 os='Arch Linux'
 kernel="$(uname -sr)"
@@ -51,7 +52,7 @@ sc="${rc}${c6}"	        # Second color
 ## Generate & Present the output
 
 cat <<EOF
-${pc}      ___${rc}     ${nc}${USER}${ic}@${nc}${hostname}${rc}
+${pc}      ___${rc}     ${nc}${user}${ic}@${nc}${hostname}${rc}
 ${pc}     (${rc}${c7}.·${rc} ${pc}|${rc}    ${lc}OS:         ${ic}${os}${rc}
 ${pc}     (${rc}${c3}<>${rc} ${pc}|${rc}    ${lc}KERNEL:     ${ic}${kernel}${rc}
 ${pc}    /${rc} ${c7}__${rc}  ${pc}\\${rc}   ${lc}UPTIME:     ${ic}${uptime}${rc}
