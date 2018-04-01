@@ -1,9 +1,5 @@
 # Archfetch
 
-<a href="https://repology.org/metapackage/archfetch">
-    <img src="https://repology.org/badge/vertical-allrepos/archfetch.svg" align="right" alt="Packaging status">
-</a>
-
 [![Donate](https://img.shields.io/badge/donate-patreon-yellow.svg)](https://www.patreon.com/akepinski)
 
 
