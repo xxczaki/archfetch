@@ -6,7 +6,7 @@ arch:
   # aur packages
   - archfetch
   script:
-  - git init . && git remote add origin https://github.com/xxczaki/archfetch.git && git pull origin master && cd archfetch && sudo install -Dm755 archfetch "/usr/bin/archfetch"
+  - git clone https://github.com/xxczaki/archfetch.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard && cd archfetch && sudo install -Dm755 archfetch "/usr/bin/archfetch"
 
 script:
 - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
