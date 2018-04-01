@@ -8,7 +8,5 @@ arch:
   script:
   - yay -S archfetch
 
-	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
-
 script:
 - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
