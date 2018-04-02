@@ -6,18 +6,16 @@ pkgdesc="Neofetch, but simplified. For Arch Linux."
 url="https://github.com/xxczaki/archfetch/"
 arch=('i686' 'x86_64')
 license=('MIT')
-depends=()
 makedepens=('git')
-source=("git+git://github.com/xxczaki/archfetch.git")
-
-pkgver() {
-  cd "$pkgname"
-  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
-}
+_gitroot="git://github.com/xxczaki/archfetch.git"
+_gitname="archfetch"
 
 package() {
-	cd "${PKGMK_SOURCE_DIR}" && cd "${pkgname}"
- 	git fetch -q
-	git reset --hard origin/master
+	cd "$srcdir"
+	if [ -d $_gitname ] ; then
+ 	  cd $_gitname && git pull origin
+	else
+  	  git clone $_gitroot $_gitname
+        fi
 	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
 }
