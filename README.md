@@ -11,7 +11,7 @@ Archfetch is a CLI system information tool written in BASH. It displays informat
 # Install
 
 Using [yaourt](https://archlinux.fr/yaourt-en): 
-`yaourt archfetch`
+`yaourt -S archfetch`
 
 Using [pacaur](https://aur.archlinux.org/packages/pacaur/): 
 `pacaur -S archfetch`
