@@ -10,15 +10,7 @@ makedepens=('git')
 _gitroot="git://github.com/xxczaki/archfetch.git"
 _gitname="archfetch"
 
-package() {
-	cd "$srcdir"
-	if [ -d $_gitname ] ; then
- 	  cd $_gitname && git pull origin
-	else
-  	  git clone $_gitroot $_gitname
-        fi
-	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
-	
+package() {	
 	cd "${PKGMK_SOURCE_DIR}"
 
 	if cd "${pkgname}"; then
