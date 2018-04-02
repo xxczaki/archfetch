@@ -10,16 +10,14 @@ depends=()
 makedepens=('git')
 source=("git+git://github.com/xxczaki/archfetch.git")
 
+pkgver() {
+  cd "$pkgname"
+  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
 package() {
-	cd "${PKGMK_SOURCE_DIR}"
-
-	if cd "${pkgname}"; then
-		git fetch -q
-		git reset --hard origin/master
-	else
-		git clone https://github.com/xxczaki/archfetch "${pkgname}"
-		cd "${pkgname}"
-	fi
-
+	cd "${PKGMK_SOURCE_DIR}" && cd "${pkgname}"
+ 	git fetch -q
+	git reset --hard origin/master
 	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
 }
