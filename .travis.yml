@@ -1,12 +1,5 @@
 language: bash
 sudo: required
 
-arch:
-  packages:
-  # aur packages
-  - archfetch
-  script:
-  - rm -rf archfetch && git clone https://github.com/xxczaki/archfetch.git && cd archfetch && chmod +x ./archfetch && ./archfetch && echo 'Done!'
-
 script:
-- "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
+- rm -rf archfetch && git clone https://github.com/xxczaki/archfetch.git && cd archfetch && chmod +x ./archfetch && ./archfetch && echo 'Done!'
