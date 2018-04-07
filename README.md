@@ -10,13 +10,8 @@ Archfetch is a CLI system information tool written in BASH. It displays informat
 
 # Install
 
-Using [**yaourt**](https://archlinux.fr/yaourt-en): 
-`yaourt -S archfetch`
+Archfetch is available on [AUR](https://aur.archlinux.org/packages/archfetch/), so you can install it using your favourite [helper](https://wiki.archlinux.org/index.php/AUR_helpers#Active). If you find this tool useful, please upvote it :smile:
 
-Using [**pacaur**](https://aur.archlinux.org/packages/pacaur/): 
-`pacaur -S archfetch`
+# License
 
-Using [**yay**](https://github.com/trizen/trizen): 
-`yay archfetch`
-
-Check out the list of [AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers).
+MIT
