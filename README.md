@@ -10,7 +10,15 @@ Archfetch is a simple CLI system information tool written in BASH. It displays i
 
 # Install
 
-Archfetch is available on [AUR](https://aur.archlinux.org/packages/archfetch/), so you can install it using your favourite [helper](https://wiki.archlinux.org/index.php/AUR_helpers#Active). If you find this tool useful, please upvote it :smile:
+Archfetch is available on [AUR](https://aur.archlinux.org/packages/archfetch/), so you can install it using your favourite [helper](https://wiki.archlinux.org/index.php/AUR_helpers#Active). 
+
+You can also install archfetch manually:
+
+```bash
+git clone https://github.com/xxczaki/archfetch
+cd archfetch 
+sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
+```
 
 # License
 
