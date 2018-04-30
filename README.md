@@ -22,7 +22,7 @@ sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
 
 # Note
 
-Archfetch might work on other systems as well!
+Archfetch might work on other distros as well!
 
 # License
 
