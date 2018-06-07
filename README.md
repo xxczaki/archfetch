@@ -17,7 +17,7 @@ You can also install archfetch manually:
 ```bash
 git clone https://github.com/xxczaki/archfetch
 cd archfetch 
-sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
+make install
 ```
 
 # Note
