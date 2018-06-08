@@ -20,10 +20,6 @@ cd archfetch
 make install
 ```
 
-# Note
+# Related
 
-Archfetch might work on other distros as well!
-
-# License
-
-MIT
+- [ubufetch](https://github.com/xxczaki/ubufetch)
