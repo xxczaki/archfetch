@@ -1,7 +1,7 @@
-# Maintainer: Antoni Kepinski <hello[at]akepinski[dot]me>
+# Maintainer: Antoni Kepinski <a[at]kepinski[dot]me>
 pkgname=archfetch
-pkgver=1.0.6
-pkgrel=4
+pkgver=1.0.7
+pkgrel=5
 pkgdesc="Simple CLI system information tool for Arch Linux."
 url="https://github.com/xxczaki/archfetch/"
 arch=('i686' 'x86_64')
@@ -22,4 +22,5 @@ package() {
 	fi
 
 	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
+	echo 'archfetch successfully installed!'
 }
