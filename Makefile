@@ -5,7 +5,7 @@ all:
 
 install:
 	@mkdir -p $(DESTDIR)$(PREFIX)/bin
-	@cp -p ubufetch $(DESTDIR)$(PREFIX)/bin/archfetch
+	@cp -p archfetch $(DESTDIR)$(PREFIX)/bin/archfetch
 	@chmod 755 $(DESTDIR)$(PREFIX)/bin/archfetch
 	@echo archfetch successfully installed!
 
