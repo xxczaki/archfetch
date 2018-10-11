@@ -21,6 +21,5 @@ package() {
 		cd "${pkgname}"
 	fi
 
-	sudo install -Dm755 archfetch "${PKG}/usr/bin/archfetch"
-	echo 'archfetch successfully installed!'
+	sudo make install
 }
