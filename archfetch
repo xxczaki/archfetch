@@ -11,8 +11,11 @@
 #
 #
 
-## Basic Configuration
+# Disable unicode.
+LC_ALL=C
+LANG=C
 
+# Basic Configuration
 user="$(whoami || printf "%s" "${HOME/*\/}")"
 hostname="$(hostname)"
 os='Arch Linux'
@@ -25,29 +28,26 @@ uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename ${SHELL})"
 
-## Basic Colors
-
+# Basic Colors
 bc="$(tput bold)"       # bold
-c0="$(tput setaf 0)"	# black
-c1="$(tput setaf 1)"	# red
-c2="$(tput setaf 2)"	# green
-c3="$(tput setaf 3)"	# yellow
-c4="$(tput setaf 4)"	# blue
-c5="$(tput setaf 5)"	# magenta
-c6="$(tput setaf 6)"	# cyan
-c7="$(tput setaf 7)"	# white
+c0="$(tput setaf 0)"	  # black
+c1="$(tput setaf 1)"	  # red
+c2="$(tput setaf 2)"	  # green
+c3="$(tput setaf 3)"	  # yellow
+c4="$(tput setaf 4)"	  # blue
+c5="$(tput setaf 5)"	  # magenta
+c6="$(tput setaf 6)"	  # cyan
+c7="$(tput setaf 7)"	  # white
 rc="$(tput sgr0)"       # reset
 
-## Color Configuration
-
-lc="${rc}${bc}${c6}"	# Labels
-nc="${rc}${bc}${c3}"	# User and hostname
-ic="${rc}${bc}${c7}"	# Info
-fc="${rc}${bc}${c6}"	# First color
+# Color Configuration
+lc="${rc}${bc}${c6}"	  # Labels
+nc="${rc}${bc}${c3}"	  # User and hostname
+ic="${rc}${bc}${c7}"	  # Info
+fc="${rc}${bc}${c6}"	  # First color
 sc="${rc}${c6}"	        # Second color
 
-## Generate & Present the output
-
+# Generate & Present the output
 cat <<EOF
 ${pc}      ___${rc}     ${nc}${user}${ic}@${nc}${hostname}${rc}
 ${pc}     (${rc}${c7}.·${rc} ${pc}|${rc}    ${lc}OS:         ${ic}${os}${rc}
